@@ -18,7 +18,7 @@ int main(){
     int nota3;
     int media;
 
-    printf("--- Digite 3 notas ---\n");// \n é para pular a para próxima linha 
+    printf("---- Digite 3 notas ----\n");// \n é para pular a para próxima linha 
    
     printf("Nota 1:");
     scanf("%d", &nota1);
