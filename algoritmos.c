@@ -19,7 +19,7 @@ int main(){
     int media;
 
     printf("---- Digite 3 notas ----\n");// \n é para pular a para próxima linha 
-   
+
     printf("Nota 1:");
     scanf("%d", &nota1);
     printf("Nota 2:");//imprima nota 
