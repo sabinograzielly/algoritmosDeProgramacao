@@ -6,6 +6,7 @@
 // multiplicação * 
 // numero1++ incrementa primeiro 
 //numero1++ incrementa depois 
+//  && e || ou o E é executado primeiro ! é a negação
   int main(){
     int numero1;
     int numero2;
@@ -28,7 +29,7 @@
     printf("Resultado: %d\n",numero1 - numero2);
     }else if (operacao == '*'){
        printf("Resultado: %d\n",resultado = numero1 * numero2);
-    }else if (operacao == '/'){
+    }else if (operacao == '/' && numero1 > numero2){
         printf("Resultado: %d\n",resultado = numero1 / numero2);
     }else if (operacao == '%'){
         printf("Resultado: %d\n",resultado = numero1 % numero2);
