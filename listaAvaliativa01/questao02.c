@@ -3,18 +3,22 @@
 
 
 int main(){
-  int N;
-  N= 0 >= N >= 1000000000
-
-printf("insira N: \n");
+  int N,numero;
+  int somaAlgarismos=0;
 scanf ("%d", &N);
 
-if %2 !=0;
-{
-  printf("%d eh par \n", N);}
+if (N % 2 == 0){
+  printf("%d eh par \n", N);
+  } 
 else {
-      printf(" %d eh impar \n",N);
-    }
+      printf("%d eh impar\n",N);
+  }
+numero = N; 
+while(N !=0){
+  somaAlgarismos += N % 10;
+    N /= 10;
+}
+printf("A soma dos algarismos de %d eh %d.\n", numero, somaAlgarismos);
 
 return 0;
 }
