@@ -12,6 +12,7 @@ else {
       printf("%d eh impar\n",N);
   }
 numero = N; 
+
 while(N !=0){
   somaAlgarismos += N % 10;
     N /= 10;
