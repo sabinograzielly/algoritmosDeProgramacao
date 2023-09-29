@@ -3,7 +3,7 @@ int main(){
     int cadastroInicial, senhaDigitada;
 
     scanf  ("%d", &cadastroInicial);
-    printf("senha cadastrada : %.4d\n", cadastroInicial);
+    printf("senha cadastrada: %.4d\n", cadastroInicial);
 
     while (1){
         scanf ("%d", &senhaDigitada);
