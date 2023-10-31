@@ -49,7 +49,7 @@ int main() {
     else if (forcaTimeB > forcaTimeA)
         printf("%s eh mais forte\n", nomeTimeB);
     else
-        printf("Os times têm a mesma força\n");
+        printf("Os times tem a mesma força\n");
 
     return 0;
 }

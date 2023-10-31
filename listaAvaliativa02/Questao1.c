@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int valores[10] = {1,1,1,1,1,1,1,1,1,1};
+    int valores[10];
     int tamanhoInicial = 10;
 
     for (int i = 0; i < tamanhoInicial; i++)
-        printf("%d%c", valores[i], i < tamanhoInicial - 1 ? ' ' : '\n');
+       scanf("%d%c", & valores[i]);
 
     while (tamanhoInicial > 1) {
         for (int i = 0; i < tamanhoInicial - 1; i++) {
