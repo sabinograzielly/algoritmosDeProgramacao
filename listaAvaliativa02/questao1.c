@@ -5,7 +5,7 @@ int main() {
     int tamanhoInicial = 10;
 
     for (int i = 0; i < tamanhoInicial; i++)
-       scanf("%d%c", & valores[i]);
+       scanf("%d%c", &valores[i]);
 
     while (tamanhoInicial > 1) {
         for (int i = 0; i < tamanhoInicial - 1; i++) {
