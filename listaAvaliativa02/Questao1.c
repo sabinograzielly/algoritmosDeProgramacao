@@ -4,8 +4,11 @@ int main() {
     int valores[10];
     int tamanhoInicial = 10;
 
+    for(int i=0; i<tamanhoInicial;i++)
+        scanf ("%d",&valores[i]);
+
     for (int i = 0; i < tamanhoInicial; i++)
-       scanf("%d%c", & valores[i]);
+        printf("%d%c", valores[i], i < tamanhoInicial - 1 ? ' ' : '\n');
 
     while (tamanhoInicial > 1) {
         for (int i = 0; i < tamanhoInicial - 1; i++) {
@@ -17,6 +20,3 @@ int main() {
 
     return 0;
 }
-
-
-
