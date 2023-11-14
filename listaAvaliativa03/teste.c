@@ -16,25 +16,33 @@ int valorRomano(char c) {
 
 int romanoParaDecimal(char* numeroRomano) {
     int resultado = 0;
-    int i;
 
-    for (i = 0; i < strlen(numeroRomano); i++) {
-        if (i > 0 && valorRomano(numeroRomano[i]) > valorRomano(numeroRomano[i - 1])) {
-            resultado += valorRomano(numeroRomano[i]) - 2 * valorRomano(numeroRomano[i - 1]);
+    for (int i = 0; i < strlen(numeroRomano); i++) {
+        int valorAtual = valorRomano(numeroRomano[i]);
+
+        if (i + 1 < strlen(numeroRomano)) {
+            int valorProximo = valorRomano(numeroRomano[i + 1]);
+
+            // Se o valor atual for menor que o próximo, subtrai
+            if (valorAtual < valorProximo) {
+                resultado -= valorAtual;
+            } else {
+                resultado += valorAtual;
+            }
         } else {
-            resultado += valorRomano(numeroRomano[i]);
+            resultado += valorAtual;
         }
     }
 
     return resultado;
 }
 
-void decimalParaBi(int decimal) {
+void decimalParaBi(int decimal, char *numeroRomano) {
     int binario[20];
     int i = 0;
 
     if (decimal == 0) {
-        printf("Base 2: 0\n");
+        printf("%s na base 2: 0\n", numeroRomano);
         return;
     }
 
@@ -44,7 +52,7 @@ void decimalParaBi(int decimal) {
         i++;
     }
 
-    printf("Base 2: ");
+    printf("%s na base 2: ", numeroRomano);
     for (int j = i - 1; j >= 0; j--) {
         printf("%d", binario[j]);
     }
@@ -52,17 +60,18 @@ void decimalParaBi(int decimal) {
 }
 
 int main() {
-    char numeroRomano[20];
+    char numeroRomano[12];
     int decimal;
 
-    printf("Digite um número romano: ");
+  
     scanf("%s", numeroRomano);
 
     decimal = romanoParaDecimal(numeroRomano);
 
-    printf("Número Romano: %s\n", numeroRomano);
-    printf("Base 10: %d\n", decimal);
-    decimalParaBi(decimal);
+
+    printf("%s na base 10: %d\n", numeroRomano, decimal);
+    decimalParaBi(decimal, numeroRomano);
+    printf("%s na base 16: %X\n", numeroRomano, decimal);
 
     return 0;
 }
