@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 int valorRomano(char c) {
     switch(c) {
         case 'I': return 1;
@@ -13,14 +14,29 @@ int valorRomano(char c) {
     }
 }
 
-int main() {
-    char numeroRomano[12];
-    int decimal;
+int romanoParaDecimal(char* numeroRomano) {
+    int resultado = 0;
 
-    scanf("%s", numeroRomano);
+    for (int i = 0; i < strlen(numeroRomano); i++) {
+        int valorAtual = valorRomano(numeroRomano[i]);
 
-    printf(numeroRomano, "%d", decimal);
-    void decimalParaBi(int decimal, char *numeroRomano) {
+        if (i + 1 < strlen(numeroRomano)) {
+            int valorProximo = valorRomano(numeroRomano[i + 1]);
+
+            if (valorAtual < valorProximo) {
+                resultado -= valorAtual;
+            } else {
+                resultado += valorAtual;
+            }
+        } else {
+            resultado += valorAtual;
+        }
+    }
+
+    return resultado;
+}
+
+void decimalParaBi(int decimal, char *numeroRomano) {
     int binario[20];
     int i = 0;
 
@@ -46,16 +62,6 @@ int main() {
     char numeroRomano[12];
     int decimal;
 
-    scanf("%s", numeroRomano);
-
-
-   decimal = numeroRomanoParaDecimal
-
-int main() {
-    char numeroRomano[12];
-    int decimal;
-
-  
     scanf("%s", numeroRomano);
 
     decimal = romanoParaDecimal(numeroRomano);
