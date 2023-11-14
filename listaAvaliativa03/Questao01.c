@@ -66,9 +66,8 @@ int main() {
 
     decimal = romanoParaDecimal(numeroRomano);
 
-
-    printf("%s na base 10: %d\n", numeroRomano, decimal);
     decimalParaBi(decimal, numeroRomano);
+    printf("%s na base 10: %d\n", numeroRomano, decimal);
     printf("%s na base 16: %X\n", numeroRomano, decimal);
 
     return 0;
