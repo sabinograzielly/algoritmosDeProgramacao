@@ -59,7 +59,7 @@ void decimalParaBi(int decimal, char *numeroRomano) {
 }
 
 int main() {
-    char numeroRomano[12];
+    char numeroRomano[13];
     int decimal;
 
     scanf("%s", numeroRomano);
