@@ -62,7 +62,7 @@ int main() {
     char numeroRomano[13];
     int decimal;
 
-    scanf("%s", numeroRomano);
+    scanf("%s", &numeroRomano);
 
     decimal = romanoParaDecimal(numeroRomano);
 
