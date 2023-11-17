@@ -46,8 +46,7 @@ int main() {
     } else if (strcmp(dia, "sabado") == 0 || strcmp(dia, "domingo") == 0) {
         printf("Nao ha proibicao no fim de semana\n");
     } else {
-        // Aqui, você pode colocar a lógica para verificar se a placa pode circular nos dias de semana.
-        // Essa parte do código será executada apenas se a placa for válida e o dia também for válido.
+
         if (strcmp(dia, "segunda-feira") == 0 || strcmp(dia, "terca-feira") == 0 ||
             strcmp(dia, "quarta-feira") == 0 || strcmp(dia, "quinta-feira") == 0 ||
             strcmp(dia, "sexta-feira") == 0) {
