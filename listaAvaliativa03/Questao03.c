@@ -16,10 +16,10 @@ int validarFormatoPlaca(char *placa) {
 }
 
 int validarDia(char *dia) {
-    return (strcmp(dia, "segunda-feira") == 0 || strcmp(dia, "terca-feira") == 0 ||
-            strcmp(dia, "quarta-feira") == 0 || strcmp(dia, "quinta-feira") == 0 ||
-            strcmp(dia, "sexta-feira") == 0 || strcmp(dia, "sabado") == 0 ||
-            strcmp(dia, "domingo") == 0);
+    return (strcmp(dia, "SEGUNDA-FEIRA") == 0 || strcmp(dia, "TERCA-FEIRA") == 0 ||
+            strcmp(dia, "QUARTA-FEIRA") == 0 || strcmp(dia, "QUINTA-FEIRA") == 0 ||
+            strcmp(dia, "SEXTA-FEIRA") == 0 || strcmp(dia, "SABADO") == 0 ||
+            strcmp(dia, "DOMINGO") == 0);
 }
 
 int main() {
@@ -33,20 +33,22 @@ int main() {
 
     scanf("%s", dia);
 
-    for (int i = 0; i < strlen(dia); i++) {
-        dia[i] = tolower(dia[i]);
-    }
 
-    int ultimoDigitoPlaca = placa[6] - '0';
+    int ultimoDigitoPlaca = placa[strlen(placa) - 1] - '0';
 
     if (!validarFormatoPlaca(placa)) {
         printf("Placa invalida\n");
-    } else if (!validarDia(dia)) {
+    }  if (!validarDia(dia)) {
         printf("Dia da semana invalido\n");
-    } else if (strcmp(dia, "sabado") == 0 || strcmp(dia, "domingo") == 0) {
+    } 
+    
+    // CRIAR VARIAVEL PRA CHECAR
+    else if (strcmp(dia, "SABADO") == 0 || strcmp(dia, "DOMINGO") == 0) {
         printf("Nao ha proibicao no fim de semana\n");
     } else {
-
+    for (int i = 0; i < strlen(dia); i++) {
+        dia[i] = tolower(dia[i]);
+    }
         if (strcmp(dia, "segunda-feira") == 0 || strcmp(dia, "terca-feira") == 0 ||
             strcmp(dia, "quarta-feira") == 0 || strcmp(dia, "quinta-feira") == 0 ||
             strcmp(dia, "sexta-feira") == 0) {
@@ -68,4 +70,4 @@ int main() {
 
     return 0;
 }
-// 90% certo, está aparecendo que o carro não pode circular, mesmo em dias que ele pode circular 
+// 99,4% certo, está aparecendo que o carro não pode circular, mesmo em dias que ele pode circular 
