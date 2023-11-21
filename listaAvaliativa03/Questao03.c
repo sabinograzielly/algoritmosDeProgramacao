@@ -38,10 +38,13 @@ int main() {
 
     if (!validarFormatoPlaca(placa)) {
         printf("Placa invalida\n");
-        return 0;//adicionei o return 0 aqui
+        if (!validarDia(dia)) {
+        printf("Dia da semana invalido\n");
+    } 
+        return 0;
     }  if (!validarDia(dia)) {
         printf("Dia da semana invalido\n");
-        // quando adiciona aqui fica na mesma porcentagem
+      return 0;
     } 
     else if (strcmp(dia, "SABADO") == 0 || strcmp(dia, "DOMINGO") == 0) {
         printf("Nao ha proibicao no fim de semana\n");
@@ -70,4 +73,3 @@ int main() {
 
     return 0;
 }
-// 99,4% certo  
